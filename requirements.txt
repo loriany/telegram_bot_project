@@ -1,0 +1,10 @@
+torch
+transformers
+python-telegram-bot
+python-dotenv
+sentencepiece
+safetensors
+numpy
+pandas
+scikit-learn
+huggingface_hub

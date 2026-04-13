@@ -1,0 +1,73 @@
+# =========================
+# ENV & VENV
+# =========================
+.env
+.venv/
+venv/
+env/
+
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# NOTEBOOKS
+# =========================
+*.ipynb
+.ipynb_checkpoints/
+
+# =========================
+# DATA / RESULTS
+# =========================
+*.csv
+*.tsv
+*.parquet
+*.jsonl
+
+data/
+copies/
+eda/
+results/
+spans_identification/
+techniques_classification/
+
+# =========================
+# MODEL FILES 
+# =========================
+models/
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# =========================
+# TRAINING ARTIFACTS
+# =========================
+logs/
+wandb/
+runs/
+lightning_logs/
+
+# =========================
+# CACHE
+# =========================
+.cache/
+hf_cache/
+transformers_cache/
+
+# =========================
+# OS / IDE
+# =========================
+.DS_Store
+.vscode/
+.idea/
+
+# =========================
+# TEMP FILES
+# =========================
+*.tmp
+*.log
