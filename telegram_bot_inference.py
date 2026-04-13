@@ -30,11 +30,14 @@ torch.set_num_threads(1)
 from dotenv import load_dotenv
 load_dotenv()
 
+os.environ["HF_HOME"] = os.getenv("HF_HOME", "/var/data/hf_cache")
+os.environ["TRANSFORMERS_CACHE"] = os.getenv("TRANSFORMERS_CACHE", "/var/data/hf_cache")
+
 BASE_DIR = Path(__file__).resolve().parent
 MODELS_DIR = BASE_DIR / "models"
-SPAN_MODEL_DIR = Path(os.getenv("SPAN_MODEL_DIR", str(MODELS_DIR / "spans")))
+SPAN_MODEL_DIR = Path(os.getenv("SPAN_MODEL_DIR", "/var/data/models/spans"))
 TECH_CHECKPOINT_PATH = Path(
-    os.getenv("TECH_CHECKPOINT_PATH", str(MODELS_DIR / "tech" / "best_model.pt"))
+    os.getenv("TECH_CHECKPOINT_PATH", "/var/data/models/tech/best_model.pt")
 )
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
